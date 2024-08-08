@@ -1,10 +1,9 @@
 {
   "name": "bun-sentry-repro",
   "version": "0.1.0",
-  "module": "src/index.ts",
-  "type": "module",
   "scripts": {
-    "start": "bun run --preload ./src/instrumentation.ts ./src/index.ts"
+    "start:preload": "bun run --preload ./src/instrumentation.ts ./src/index.ts",
+    "start": "bun run ./src/index.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
@@ -14,7 +13,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@sentry/bun": "^8.13.0",
+    "@sentry/bun": "^8.24.0",
     "express": "^4.19.2"
   }
 }
